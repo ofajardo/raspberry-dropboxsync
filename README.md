@@ -3,6 +3,9 @@ Simple script to synchronize a directory in raspberry pi with a Dropbox Applicat
 
 Setup: 
 * Create a Dropbox Application and get the token. 
+* The first time, upload all the files you want to synchronize to the Dropbox application folder.
+  This is important because the first time the script will just download everything from dropbox to local, 
+  overwriting whatever you have in there!
 * Save the token to a text file ".dropbox_token"
 * Put the token file in the root of the raspberry pi folder you
   want to synchronize.
@@ -12,8 +15,7 @@ Setup:
 What does it do?
 
 The first time it gets executed, it will download everything on your
-dropbox application and create a .dropbox_state file saving the sate. Then it
-will upload any new folders to dropbox.
+dropbox application and create a .dropbox_state file saving the sate. 
 This means it will overwrite local files, get a copy of your latest local files
 to dropbox before executing this script the first time!.
 
